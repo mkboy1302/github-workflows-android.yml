@@ -1,1 +1,17 @@
+name: Hello GitHub
 
+on:
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Say Hello
+        run: |
+          echo "Hello from GitHub Actions!"
+          echo "Workflow is working successfully."
